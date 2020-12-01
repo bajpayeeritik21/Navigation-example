@@ -17,16 +17,22 @@ import { createAppContainer } from 'react-navigation';
 // import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
  
 export default class App extends Component {
+    
   render(){
+    const pupils=[
+      {key:1,name:"karan",DOB:"26-06"},
+      {key:2,name:"rahul",DOB:"23-09"},
+      {key:3,name:"rituraj",DOB:"25-03"  }
+    ];
   const Navigator=createAppContainer(AppDrawerNavigator);
   return(
-    <Navigator/>
+    <Navigator pupilList={pupils}/>
   )
   }
 }
 const screens={
   ContactUs:{
-    screen:Contacts
+    screen:Contacts,
   }
     ,
     Favorites:{
