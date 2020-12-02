@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-Contacts = () => {
+const Settings = () => {
   return (
     <View>
       <Text>Settings</Text>
@@ -10,4 +10,4 @@ Contacts = () => {
   )
 }
 
-export default Contacts;
+export default Settings;

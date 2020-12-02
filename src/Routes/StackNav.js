@@ -4,6 +4,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import AboutUs from '../screens/aboutscreen';
 import HomeScreen from '../screens/homescreen';
+import Settings from '../screens/drawer/Settings';
 const screens={
     HomeScreen:{
       screen:HomeScreen,
@@ -17,6 +18,13 @@ const screens={
         screen:AboutUs,
         navigationOptions:{
           title:'Player-Info',
+          headerStyle:{backgroundColor:'grey'}
+        }
+    },
+    Settings:{
+        screen:Settings,
+        navigationOptions:{
+          title:'Settings',
           headerStyle:{backgroundColor:'grey'}
         }
     }

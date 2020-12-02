@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, View, Text ,Image} from 'react-native';
 
-export default class Homescreen extends Component {
+export default class plant2 extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
