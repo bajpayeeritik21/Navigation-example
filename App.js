@@ -5,6 +5,10 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 // import { NavigationContainer } from '@react-navigation/native';
 import Contacts from './src/screens/drawer/contactus';
 import Favorites from './src/screens/drawer/Favorites';
+import Nav from './src/Routes/StackNav'
+
+import AboutUs from './src/screens/aboutscreen';
+import HomeScreen from './src/screens/homescreen';
 import Settings from './src/screens/drawer/Settings';
 
 // import Tab1 from './src/screens/tabs/plant1';
@@ -24,19 +28,51 @@ export default class App extends Component {
       {key:2,name:"rahul",DOB:"23-09"},
       {key:3,name:"rituraj",DOB:"25-03"  }
     ];
-  const Navigator=createAppContainer(AppStackNavigator);
+  const Navigator=createAppContainer(DrawerNav);
   return(
-    <Navigator pupilList={pupils}/>
+    <Navigator />
   )
   }
 }
-const screens={
-  ContactUs:{
+const DrawerNav=createDrawerNavigator({
+  Home:{
+    screen:Nav
+  },
+  ContacUs:{
     screen:Contacts,
+  },
+  Favorites:{
+    screen:Favorites,
+  },
+  Settings:{
+    screen:Settings,
+  },
+
+  
+})
+const screens={
+  HomeScreen:{
+    screen:HomeScreen,
+    navigationOptions:{
+      title:'HomeScreen',
+      headerStyle:{backgroundColor:'grey'}
+    }
   }
     ,
+    AboutUs:{
+      screen:AboutUs,
+      navigationOptions:{
+        title:'Player-Info',
+        headerStyle:{backgroundColor:'grey'}
+      }
+  },
     Favorites:{
-      screen:Favorites}
+      screen:Favorites,
+      navigationOptions:{
+        title:'Favorites',
+        headerStyle:{backgroundColor:'grey'}
+      }
+  }
       ,
     Setting:{screen:Settings  }
 }

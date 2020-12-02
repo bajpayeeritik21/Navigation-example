@@ -1,27 +1,17 @@
+  
 import React from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
-import {
-  useNavigation,
-  useRoute,
-  useFocusEffect,
-  useNavigationState
-} from '@react-navigation/native';
+import { View, Text, Button } from 'react-native';
 
-import { styles } from './styles/styles';
 
-Detail = () => {
-
-  const navigation = useNavigation();
-  const route = useRoute();
-  console.log(route)
-
-  return (
-    <View>
-      <TouchableOpacity>
-          <Text onPress={() => this.props.navigation.navigate('homescreen')}>Go to Home</Text>
-        </TouchableOpacity>
-    </View >
-  );
+export default function Favorites({navigation}){
+  const pressHandler=()=>{
+    navigation.navigate('Setting')
+    }
+  return(
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ flex: 0.1}}>Player-Info</Text>
+  <Text >{navigation.getParam('data') }</Text>
+      <Button title='Go to Setting' onPress={pressHandler}/>
+    </View>
+  )
 }
-
-export default Detail;
