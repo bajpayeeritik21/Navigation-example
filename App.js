@@ -24,7 +24,7 @@ export default class App extends Component {
       {key:2,name:"rahul",DOB:"23-09"},
       {key:3,name:"rituraj",DOB:"25-03"  }
     ];
-  const Navigator=createAppContainer(AppDrawerNavigator);
+  const Navigator=createAppContainer(AppStackNavigator);
   return(
     <Navigator pupilList={pupils}/>
   )
@@ -40,7 +40,7 @@ const screens={
       ,
     Setting:{screen:Settings  }
 }
-const AppDrawerNavigator = createStackNavigator(screens
+const AppStackNavigator = createStackNavigator(screens
 );
 // const Stack = createStackNavigator();
 // const MaterialBottomTabs = createMaterialBottomTabNavigator();

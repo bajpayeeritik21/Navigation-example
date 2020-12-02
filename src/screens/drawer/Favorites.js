@@ -8,9 +8,9 @@ export default function Favorites({navigation}){
     navigation.navigate('Setting')
     }
   return(
-    <View>
-      <Text>Favorites</Text>
-  <Text>here is{navigation.getParam('pupils')}</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ flex: 0.1}}>Favorites</Text>
+  <Text >{navigation.getParam('data') }</Text>
       <Button title='Go to Setting' onPress={pressHandler}/>
     </View>
   )
