@@ -2,8 +2,8 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import plant1 from '../screens/tabs/plant1';
-import plant2 from '../screens/drawer/Favorites';
-import plant3 from '../screens/drawer/Settings';
+import plant2 from '../screens/tabs/plant2';
+import plant3 from '../screens/tabs/plant3';
 import Nav from './StackNav'
 
 
