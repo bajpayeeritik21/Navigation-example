@@ -5,6 +5,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import AboutUs from '../screens/aboutscreen';
 import HomeScreen from '../screens/homescreen';
 import Settings from '../screens/drawer/Settings';
+import Contacts from '../screens/drawer/contactus';
 const screens={
     HomeScreen:{
       screen:HomeScreen,
@@ -21,6 +22,13 @@ const screens={
           headerStyle:{backgroundColor:'grey'}
         }
     },
+    Contacs:{
+      screen:Contacts,
+      navigationOptions:{
+        title:'Contacts',
+        headerStyle:{backgroundColor:'grey'}
+      }
+  },
     Settings:{
         screen:Settings,
         navigationOptions:{

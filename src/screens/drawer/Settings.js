@@ -1,13 +1,21 @@
-  
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,StyleSheet } from 'react-native';
 
-const Settings = () => {
+export default function Settings ({navigation}){
   return (
-    <View>
-      <Text>Settings</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ flex: 0.1}}>Details</Text>
+      <Text >{navigation.getParam('email') }</Text>
     </View>
   )
 }
-
-export default Settings;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    fontSize:24
+  }
+});

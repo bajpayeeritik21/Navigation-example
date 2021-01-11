@@ -17,13 +17,9 @@ import { createAppContainer } from 'react-navigation';
 
  
 export default class App extends Component {
-    
+  
   render(){
-    const pupils=[
-      {key:1,name:"karan",DOB:"26-06"},
-      {key:2,name:"rahul",DOB:"23-09"},
-      {key:3,name:"rituraj",DOB:"25-03"  }
-    ];
+    
   const Navigator=createAppContainer(DrawerNav);
   return(
     <Navigator />
